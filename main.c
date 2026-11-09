@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(){
-	unsigned char buff[10];
+	unsigned char buff[2];
 	FILE* fptr;
 
 
@@ -12,8 +12,11 @@ int main(){
 		printf("The file is not opened.");
 		return -1;
 	}
-	fread(buff,sizeof(buff),1,fptr);
-	printf(buff);
+
+	while(fread(buff,sizeof(buff)-1,1,fptr) > 0){
+		buff[1] = '\0';
+		printf(buff);
+	}
 
 
 	return 0;

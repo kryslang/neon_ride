@@ -1,25 +1,25 @@
 # Project Title
 
-Save as scratch
+Neon ride
 
 ## Description
 
-saves anything as a valid scratch file
+a simple game where you compete with your friend on a single computer
 
 ### Dependencies
 
-* works on any OS with standard C libraries
+* works on any OS with standard C libraries + SDL2
 
 ### Installing
 
 * how to compile
 ```
-gcc main.c -o write
+gcc main.c -o main -lSDL2
 ```
 
 ### Executing program
 
 * How to run
 ```
-./write
+./main
 ```
